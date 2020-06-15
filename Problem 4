@@ -1,0 +1,10 @@
+def isPalindrome(num):
+    return(str(num) == str(num)[::-1])
+
+
+ans = 0
+for a in range(100, 999):
+    for b in range(100, 999):
+        if isPalindrome(a*b) and (a * b) > ans:
+            ans = a * b
+print(ans)
