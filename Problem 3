@@ -1,0 +1,12 @@
+def primeFactor(num):
+    seed = 2
+    while seed < num:
+        if(num % seed == 0):
+            num = num/seed
+            seed = 2
+        else:
+            seed += 1
+    return seed
+
+
+print(primeFactor(600851475143))

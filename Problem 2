@@ -1,0 +1,14 @@
+def fib(num):
+    a, b = 0, 1
+    fibList = [0, 1, ]
+    while (a + b) < num:
+        fibList.append(a+b)
+        a, b = b, a+b
+    return fibList
+
+
+def isEven(num):
+    return (num % 2 == 0)
+
+
+print(sum(i for i in fib(4000000) if isEven(i)))
